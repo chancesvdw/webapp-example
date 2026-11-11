@@ -12,12 +12,23 @@ function App() {
         <img src={reactLogo} className="h-16 w-16 animate-[spin_20s_linear_infinite]" alt="React logo" />
       </div>
       <h1 className="text-4xl font-bold tracking-tight">Vite + React + Tailwind</h1>
-      <button
-        onClick={() => setCount((c) => c + 2)}
-        className="rounded-lg bg-indigo-600 px-5 py-2.5 font-medium text-white shadow hover:bg-indigo-500 active:scale-95 transition"
-      >
-        Count is {count}
-      </button>
+      <div className="flex items-center gap-4">
+        <button
+          onClick={() => setCount((c) => c - 1)}
+          className="rounded-lg bg-pink-600 px-5 py-2.5 font-medium text-white shadow hover:bg-pink-500 active:scale-95 transition"
+        >
+          Decrease
+        </button>
+        <span className="w-16 text-center text-2xl font-semibold tabular-nums">
+          {count}
+        </span>
+        <button
+          onClick={() => setCount((c) => c + 1)}
+          className="rounded-lg bg-pink-600 px-5 py-2.5 font-medium text-white shadow hover:bg-pink-500 active:scale-95 transition"
+        >
+          Increase
+        </button>
+      </div>
       <p className="text-slate-500 dark:text-slate-400">
         Edit <code className="font-mono text-sm">src/App.jsx</code> and save to test HMR.
       </p>
